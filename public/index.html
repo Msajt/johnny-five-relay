@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Lamp Controller</title>
+        
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <style>
+            body {
+                padding-top: 10rem;
+            }
+            .starter-template {
+                padding: 3rem 1.5rem;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+            <a class="navbar-brand" href="#">Lamp Web Controller</a>
+        </nav>
+        
+        <main role="main" class="container">
+            <div class="starter-template">
+                <button type="button" id="relayon" class="btn btn-success" style="width: 100px;">Lamp On</button>
+                <button type="button" id="relayoff" class="btn btn-danger" style="width: 100px;">Lamp Off</button>
+                
+                <div style="margin-top: 1em">
+                    <h3>LDR Slider</h3>
+                    0 <input id="degree" type="range" min="0" max="500" value=""/> 500
+                </div>
+                
+                <p id="result"></p>
+                <p id="lamp-use"></p>
+
+                <p></p>
+
+                <iframe width="450" 
+                        height="260" 
+                        style="border: 1px solid #cccccc;" 
+                        src="https://thingspeak.com/channels/1971838/charts/1?bgcolor=%23ffffff&color=%23d62020&days=1&dynamic=true&results=10&type=line">
+                </iframe>
+            </div>
+        </main>
+        <script src="./main.js"></script>
+    </body>
+</html>
